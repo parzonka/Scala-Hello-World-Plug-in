@@ -7,14 +7,18 @@
 	<artifactId>scala</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+
 	<modules>
 		<module>scala-hello-world-plugin</module>
 		<module>scala-hello-world-feature</module>
 		<module>scala-hello-world-updatesite</module>
 	</modules>
+
 	<properties>
+		<project.build.sourceDirectory>src</project.build.sourceDirectory>
 		<tycho.version>0.10.0</tycho.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.scala-lang</groupId>
@@ -22,9 +26,8 @@
 			<version>2.8.1</version>
 		</dependency>
 	</dependencies>
+
 	<build>
-		<sourceDirectory>${basedir}/src</sourceDirectory>
-		<testSourceDirectory>${basedir}/test</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.sonatype.tycho</groupId>
