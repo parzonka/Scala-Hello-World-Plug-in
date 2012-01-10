@@ -18,8 +18,27 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.sourceDirectory>src</project.build.sourceDirectory>
 		<scala.version>2.9.1</scala.version>
-		<tycho.version>0.10.0</tycho.version>
+		<tycho.version>0.11.1</tycho.version>
 	</properties>
+	
+	<repositories>
+		<repository>
+			<id>indigo</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/releases/indigo</url>
+		</repository>
+		<repository>
+			<id>scala eclipse nightly</id>
+			<layout>p2</layout>
+			<url>http://download.scala-ide.org/scala-eclipse-toolchain-osgi-${scala.version}.final/</url>
+		</repository>
+		<repository>
+			<id>scala-tools.org.releases</id>
+			<name>Scala Tools Maven2 Repository</name>
+			<url>http://scala-tools.org/repo-releases/</url>
+			<snapshots />
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<dependency>
@@ -61,22 +80,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	<repositories>
-		<repository>
-			<id>galileo</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/galileo</url>
-		</repository>
-		<repository>
-			<id>scala eclipse nightly</id>
-			<layout>p2</layout>
-			<url>http://download.scala-ide.org/scala-eclipse-toolchain-osgi-${scala.version}.final/</url>
-		</repository>
-		<repository>
-			<id>scala-tools.org.releases</id>
-			<name>Scala Tools Maven2 Repository</name>
-			<url>http://scala-tools.org/repo-releases/</url>
-			<snapshots />
-		</repository>
-	</repositories>
+	
 </project>
