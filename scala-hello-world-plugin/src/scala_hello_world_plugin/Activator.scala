@@ -1,14 +1,14 @@
-package scala_hello_world_plugin;
+package scala_hello_world_plugin
 
-import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.ui.plugin.AbstractUIPlugin;
-import org.osgi.framework.BundleContext;
+import org.eclipse.jface.resource.ImageDescriptor
+import org.eclipse.ui.plugin.AbstractUIPlugin
+import org.osgi.framework.BundleContext
 
 /**
  * The activator class controls the plug-in life cycle
  */
 class Activator extends AbstractUIPlugin {
-    // The plug-in ID
+  // The plug-in ID
   val PLUGIN_ID = "test_plugin"
 
   /*
@@ -16,26 +16,26 @@ class Activator extends AbstractUIPlugin {
    * @see org.eclipse.ui.plugin.AbstractUIPlugin#start(org.osgi.framework.BundleContext)
    */
   override def start(context: BundleContext) {
-    super.start(context);
-    Activator.plugin = this;
+    super.start(context)
+    Activator.plugin = this
   }
-  
+
   /*
    * (non-Javadoc)
    * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
    */
   override def stop(context: BundleContext) {
-    Activator.plugin = null;
-    super.stop(context);
+    Activator.plugin = null
+    super.stop(context)
   }
-  
+
   /**
    * Returns the shared instance
    *
    * @return the shared instance
    */
-  def getDefault() {
-    return Activator.plugin;
+  def getDefault(): Activator = {
+    Activator.plugin
   }
 
   /**
@@ -46,8 +46,9 @@ class Activator extends AbstractUIPlugin {
    * @return the image descriptor
    */
   def getImageDescriptor(path: String) {
-    AbstractUIPlugin.imageDescriptorFromPlugin(PLUGIN_ID, path);
+    AbstractUIPlugin.imageDescriptorFromPlugin(PLUGIN_ID, path)
   }
+
 }
 
 object Activator {
